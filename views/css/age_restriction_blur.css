@@ -1,0 +1,77 @@
+/* Styles for the entire page container */
+.page-container {
+  position: relative;
+ 
+}
+/* Styles for the blurred background overlay */
+.page-container .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed for the blur effect */
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); /* Apply the blur effect */
+  z-index: 5000; /* Set a lower z-index to keep it behind the pop-up */
+}
+/* Styles for the age verification pop-up container */
+  .age-restriction-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    background-color: #fff; /* Add a background color for the pop-up */
+    padding: 20px; /* Add padding to the pop-up content */
+    border-radius: 10px; /* Add border radius for a rounded pop-up */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+   
+  }
+  
+  /* Styles for the age verification pop-up content */
+  .age-restriction-container p.description {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .age-restriction-container img.logo {
+    display: block;
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: auto;
+    margin: 0 auto 15px;
+  }
+  
+  .age-restriction-container .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+  }
+  
+  .age-restriction-container button {
+    padding: 10px 20px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 1rem;
+  }
+  
+  /* Styles for the "I'm under 18" button */
+  .age-restriction-container #age-restriction-no {
+    background-color: '{$AGE_VERIFICATION_BUTTON_COLOR}';
+  }
+  
+  /* Styles for the "I'm 18 or older" button */
+  .age-restriction-container #age-restriction-yes {
+    background-color: '{$AGE_VERIFICATION_BUTTON_COLOR}';
+  }
+  
